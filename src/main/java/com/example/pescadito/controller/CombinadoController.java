@@ -39,6 +39,7 @@ public class CombinadoController {
         if (combinado.getDisponible() == null){
             return ResponseEntity.badRequest().body("El campo disponible es obligatorio");
         }
+        //hola
         return ResponseEntity.ok(combinadoService.crearCombinado(combinado));
     }
 }
