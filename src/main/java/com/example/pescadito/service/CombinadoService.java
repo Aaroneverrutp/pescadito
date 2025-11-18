@@ -40,6 +40,12 @@ public class CombinadoService {
         combinadoRepository.deleteById(id);
     }
 
+    //Buscar por disponibilidad
+    public List<Combinado> buscarPorDisponibilidad(Boolean disponible, Combinado combinado){
+        combinado.setDisponible(disponible);
+        return combinadoRepository.findAll();
+
+    }
 
 }
 
